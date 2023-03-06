@@ -1,0 +1,205 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    
+    
+    html { 
+    background: url(assets/images/images-1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        
+    }
+    
+    
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+    text-decoration: none;
+    color: black;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 2fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    
+    
+    header { 
+    margin-top: 10px;
+    margin-bottom: 100px;
+    padding: 0px;
+    z-index: 2;
+    background-color: white; 
+    background-repeat: no-repeat;
+    }
+    
+    @font-face {
+       font-family: myFirstFont;
+       src: url(assets/fonts/AlexandrinesDemoRegular.ttf);
+    }
+      
+    
+    h1 { 
+    font-family: myFirstFont;
+    letter-spacing: 5px;
+    text-align: center;
+    line-height: 140px;
+    width: 300px;
+    height: 90px;
+    color: white; 
+    background-image: url(assets/images/download.jpg);
+    }
+    
+    
+    .container-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    }
+    
+    form {
+    width: 500px;
+    border-radius: 4px;
+    box-shadow: 1px 5px 10px 0px;
+    background-image: url(assets/images/ds.jpg); 
+    background-repeat: no-repeat;
+    }
+    
+    form div {
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    border-bottom: 3px solid blue;
+    }
+    
+    form div:nth-child(5),
+    form div:nth-child(6) { border-bottom: none;}
+    
+    
+    form div input,
+    form div button  { 
+    width: 100%;
+    padding: 1px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 95%;
+    background-color: transparent;
+    }
+    
+    form div input[type="text"] { padding: 4px 0;}
+    
+    form div input[type="date"],
+    form div input[type="time"] { cursor: text; }
+    
+    form div input:focus,
+    form div button:focus { outline: none; }
+    
+    form div label { 
+    padding: 3px 0;
+    align-self: center;
+    font-weight: 400;
+    color: grey;
+    }
+    
+    form div button {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s;
+    }
+    
+    form div button:hover { color: grey; }
+    
+    .container-status {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    background-color: red;
+    color: white;
+    }
+    
+    
+    .container-notes { 
+      width: 100vw;
+      padding: 0 50px; 
+  }
+  
+  .box-note {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+     grid-template-rows: auto;
+     justify-items: center;
+  }
+  
+  .note-style {
+      width: 180px;
+      height: 250px;
+      position: relative;
+      padding: 10px;
+      transition: transform 0.2s;
+      list-style-type: none;
+      background-image: url(assets/images/ntl.png);
+      opacity: 1;
+     animation-name: fadeInNote;
+     animation-iteration-count: 1;
+     animation-timing-function: ease-in;
+     animation-duration: 0.5s;
+  }
+  
+  @keyframes fadeInNote {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+  }
+  
+  .note-style:hover { transform: skewY(-1deg); }
+  
+  .container-delete-icon {
+      visibility: hidden;
+      opacity: 0;    
+  }
+  
+  .container-delete-icon button {
+      display: inline-block;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      border: none;
+      z-index: 1;
+      cursor: pointer;
+      background-color: transparent;
+      color: #e84118;
+  }
+  
+  .fa-window-close{
+      font-size: 150%;
+      background-color: #FEFF99;
+  }
+  
+  .note-style:hover .container-delete-icon {
+      visibility: visible;
+      opacity: 1;
+  }
+  
+  .task-note {
+      height: 250px;
+      max-height: 170px;
+      margin-top:20px;
+      word-wrap: break-word;
+      padding-bottom: 5px;
+      transform: skewY(1deg);
+      overflow-y: auto;
+  }
+  
+  .task-date-time { transform: skewY(1deg); }
+  

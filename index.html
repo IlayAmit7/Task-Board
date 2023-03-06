@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Board</title>
+
+    <script></script>
+    <link rel="stylesheet" href="style.css">
+
+
+   
+</head>
+<body>
+
+<div class="container">
+<header>
+<div>
+    <h1>Task board</h1>
+</div>
+</header>
+
+<section class="section-board">
+
+<div class="container-form">
+
+<form action="#" method="post" target="_self">
+
+    <div>
+        <label for="task-content"></label>
+        <input type="text" name="task-content" id="task-content" placeholder="Enter your task" required>
+    </div>
+
+     <div>
+        <label for="task-date">Date:</label>
+        <input type="date" name="task-date" id="task-date" required>
+     </div>
+
+    <div>
+        <label for="task-time">Time:</label>
+        <input type="time" name="task-time" id="task-time" required>
+    </div>
+    
+    <div>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+    </div>
+
+    <div>
+        <button type="reset" class="btn btn-secondary">Reset Form</button>
+    </div>
+
+    <div id="container-status" class="container-status">
+                    
+    </div>
+
+    </form>
+    </div>
+
+    <div id="container-notes" class="container-notes">
+
+    <ul id="note" class="box-note">
+
+</ul>
+
+</div>
+</section>
+
+<script src="https://kit.fontawesome.com/56ce1a5ba7.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+  
+</body>
+
+</html>
